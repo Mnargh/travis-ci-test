@@ -16,6 +16,10 @@ jobs:
       name: "test 4"
       script:
         - sleep 10
+    - stage: test
+      name: "test 5"
+      script:
+        - sleep 10
     - stage: deploy
       name: "deploy 1"
       script:
