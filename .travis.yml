@@ -1,5 +1,10 @@
 language: bash
 
-script:
-  - echo "hello world"
-  - cat textfile.txt
+jobs:
+  include:
+    - stage: build
+      script:
+        - echo "building hello world"
+    - stage: test
+      script:
+        - echo "testing hello world"
