@@ -1,7 +1,12 @@
 jobs:
   include:
     - stage: test
-      script: echo "running some tests..."
+      script:
+        - echo "running some tests..."
+        - date
+        - sleep 5
+        - date
+        - echo "tests OK"
 
     - stage: deploy
       script: echo "deploying now..."
