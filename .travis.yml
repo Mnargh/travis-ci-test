@@ -1,5 +1,7 @@
-language: bash
+jobs:
+  include:
+    - stage: test
+      script: echo "running some tests..."
 
-script:
-  - echo "hello world"
-  - cat textfile.txt
+    - stage: deploy
+      script: echo "deploying now..."
