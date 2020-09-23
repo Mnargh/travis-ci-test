@@ -1,12 +1,26 @@
 jobs:
   include:
     - stage: test
+      name: "test 1"
       script:
-        - echo "running some tests..."
         - date
-        - sleep 5
+    - stage: test
+      name: "test 2"
+      script:
+        - sleep 10
+    - stage: test
+      name: "test 3"
+      script:
         - date
-        - echo "tests OK"
-
+    - stage: test
+      name: "test 4"
+      script:
+        - sleep 10
     - stage: deploy
-      script: echo "deploying now..."
+      name: "deploy 1"
+      script:
+        - date
+    - stage: deploy
+      name: "deploy 2"
+      script:
+        - date
